@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 12" width="1200" height="12" role="presentation">
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1F6FEB" stop-opacity="0"/>
+      <stop offset=".2" stop-color="#1F6FEB" stop-opacity=".45"/>
+      <stop offset=".8" stop-color="#7C4DFF" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#7C4DFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="pulse" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00E5FF" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#B8F5FF" stop-opacity="1"/>
+      <stop offset="1" stop-color="#00E5FF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="b" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2"/></filter>
+  </defs>
+  <rect x="0" y="5.25" width="1200" height="1.5" fill="url(#base)"/>
+  <g filter="url(#b)">
+    <rect y="4.5" width="220" height="3" fill="url(#pulse)" opacity=".9">
+      <animate attributeName="x" from="-220" to="1200" dur="4.2s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <circle cy="6" r="2.6" fill="#EAFBFF">
+    <animate attributeName="cx" from="-10" to="1210" dur="4.2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;0" dur="4.2s" repeatCount="indefinite"/>
+  </circle>
+</svg>
