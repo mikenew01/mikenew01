@@ -121,23 +121,18 @@ flowchart LR
     GW --> GRD{{"Guardrails<br/>PII · prompt injection · rate limit"}}
     GRD --> ORQ["Orquestrador de Agentes<br/><i>LangGraph · CrewAI</i>"]
 
-    ORQ --> RET["Retriever híbrido<br/>BM25 + semântico"]
+    ORQ <--> RET["Retriever híbrido<br/>BM25 + semântico · reranker"]
     RET --> VDB[("pgvector<br/>PostgreSQL")]
-    RET --> RRK["Reranker<br/>top-k contextual"]
-    RRK --> ORQ
-
+    ORQ <--> LLM[["LLM<br/>Bedrock · Azure OpenAI · Vertex"]]
     ORQ --> TL["Tools · function calling<br/>APIs corporativas · Kafka"]
-    ORQ --> LLM[["LLM<br/>Bedrock · Azure OpenAI · Vertex"]]
-    LLM --> ORQ
     ORQ --> RSP(["Resposta<br/>com citações"])
 
     subgraph ING["INGESTÃO — batch e near real-time"]
-        direction LR
-        SRC[("Fontes<br/>Oracle · S3 · Blob · APIs")] --> CHK["Chunking<br/>+ metadados"] --> EMB["Embeddings"] --> VDB
+        SRC[("Fontes<br/>Oracle · S3 · Blob · APIs")] --> CHK["Chunking<br/>+ metadados"] --> EMB["Embeddings"]
     end
+    EMB --> VDB
 
     subgraph GOV["CONTROLE — o que separa POC de produção"]
-        direction LR
         EV["Avaliação<br/>groundedness · relevância"]
         CO["FinOps de tokens<br/>cache · roteamento de modelo"]
         OT[["OpenTelemetry<br/>Prometheus · Grafana"]]
@@ -146,16 +141,15 @@ flowchart LR
     ORQ -.-> EV
     LLM -.-> CO
     GW -.-> OT
-    ORQ -.-> OT
 
-    classDef edge fill:#0D1117,stroke:#00E5FF,stroke-width:1.4px,color:#E6EDF3
-    classDef core fill:#101B2D,stroke:#2F81F7,stroke-width:1.4px,color:#E6EDF3
-    classDef ai fill:#141032,stroke:#7C4DFF,stroke-width:1.4px,color:#E6EDF3
-    classDef data fill:#0B1F1A,stroke:#3FB950,stroke-width:1.4px,color:#E6EDF3
-    class U,RSP,GW,GRD edge
-    class ORQ,RET,RRK,TL core
-    class LLM,EMB,EV,CO ai
-    class VDB,SRC,CHK,OT data
+    classDef borda fill:#0D1117,stroke:#00E5FF,stroke-width:1.4px,color:#E6EDF3
+    classDef nucleo fill:#101B2D,stroke:#2F81F7,stroke-width:1.4px,color:#E6EDF3
+    classDef ia fill:#141032,stroke:#7C4DFF,stroke-width:1.4px,color:#E6EDF3
+    classDef dados fill:#0B1F1A,stroke:#3FB950,stroke-width:1.4px,color:#E6EDF3
+    class U,RSP,GW,GRD borda
+    class ORQ,RET,TL nucleo
+    class LLM,EMB,EV,CO ia
+    class VDB,SRC,CHK,OT dados
 ```
 
 <div align="center">
