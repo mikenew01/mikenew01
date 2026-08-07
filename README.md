@@ -256,10 +256,11 @@ flowchart LR
 
 ## `⬢` TELEMETRY
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=mikenew01&show_icons=true&hide_border=true&include_all_commits=true&count_private=true&bg_color=00000000&title_color=00E5FF&text_color=8FB6DE&icon_color=7C4DFF&ring_color=00E5FF&rank_icon=github" alt="GitHub stats" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mikenew01&layout=compact&langs_count=10&hide_border=true&bg_color=00000000&title_color=00E5FF&text_color=8FB6DE" alt="Top languages" />
+<img src="https://raw.githubusercontent.com/mikenew01/mikenew01/main/assets/stats.svg" width="98%" alt="Painel de telemetria do GitHub" />
 
-<br/>
+<sub>Painel gerado por GitHub Actions a partir da API do GitHub — sem dependência de serviço externo.</sub>
+
+<br/><br/>
 
 <img height="165" src="https://streak-stats.demolab.com?user=mikenew01&hide_border=true&background=00000000&stroke=1F6FEB&ring=00E5FF&fire=7C4DFF&currStreakLabel=00E5FF&sideLabels=8FB6DE&dates=5C7D9E&currStreakNum=E6EDF3&sideNums=E6EDF3" alt="Contribution streak" />
 
