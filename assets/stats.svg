@@ -32,7 +32,7 @@
       <animate attributeName="opacity" from="0" to="1" dur=".7s" begin="0.00s" fill="freeze"/>
       <rect x="44" y="66" width="246" height="84" rx="11" fill="#0C1626" stroke="#1F6FEB" stroke-opacity=".38"/>
       <rect x="44" y="66" width="246" height="2.5" rx="1.25" fill="#00E5FF" opacity=".55"/>
-      <text x="167" y="112" text-anchor="middle" fill="#E6EDF3" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="27" font-weight="700">46</text>
+      <text x="167" y="112" text-anchor="middle" fill="#E6EDF3" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="27" font-weight="700">47</text>
       <text x="167" y="133" text-anchor="middle" fill="#5C7D9E" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9" letter-spacing="1.6">COMMITS · 12M</text>
     </g>
     <g opacity="0">
