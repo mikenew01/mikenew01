@@ -24,7 +24,7 @@
     <g font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" letter-spacing="2.4">
       <circle cx="52" cy="35" r="3.2" fill="#3FB950"><animate attributeName="opacity" values="1;.15;1" dur="1.7s" repeatCount="indefinite"/></circle>
       <text x="64" y="39" fill="#7FD8F5">MISSION TELEMETRY</text>
-      <text x="1148" y="39" text-anchor="end" fill="#4E7BB0">SYNC 2026-08-27 · 96 REPOS</text>
+      <text x="1148" y="39" text-anchor="end" fill="#4E7BB0">SYNC 2026-08-28 · 96 REPOS</text>
       <text x="620" y="62" fill="#7FD8F5">STACK · BY REPOSITORY</text>
     </g>
     
